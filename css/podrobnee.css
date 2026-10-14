@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: clamp(12px, 1.2vw, 25px);
+    /* задаю плавающий размер шрифта: самый маленький 12px, самый стандартный для всего 1.2vw, и не больше 25px */
+}
+
+
+.wrap_podrobno {
+    min-height: 100vh;
+
+    background: url(../img_podrobnee/pisk.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wrap_podrobno-nesv{
+     min-height: 100vh;
+
+    background: url(../img/nesvig_doc.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wrap_podrobno-chapskie{
+
+     min-height: 100vh;
+
+    background: url(../img_podrobnee/chapskie.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wrap_podrobno-budslav{
+     min-height: 100vh;
+
+    background: url(../img_podrobnee/budslav2.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#video,
+#map {
+    width: 55vw;
+    height: 45vh;
+    border-radius: 1vw;
+    box-shadow: 0 0 15px 2px black;
+    margin: 0 auto;
+    margin-bottom: 5vh!important;
+
+}
+
+.video_div {
+    width: 55vw;
+    height: 55vh;
+    margin: 0 auto;
+
+}
+
+.podrobno_button{
+    height: 7vh!important;
+}
+
