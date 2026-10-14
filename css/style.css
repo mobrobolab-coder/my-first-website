@@ -1,0 +1,929 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html {
+    font-size: clamp(12px, 1.2vw, 25px);
+    /* задаю плавающий размер шрифта: самый маленький 12px, самый стандартный для всего 1.2vw, и не больше 25px */
+}
+
+
+.wrap-index {
+    width: 100vw;
+
+    min-height: 100vh;
+    border: 2px solid rgb(67, 59, 59);
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #fd1717 16%, #2ac016 100%);
+}
+
+/* стили для index.html*/
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px black;
+    margin-top: 30px;
+    margin-bottom: 14px;
+
+
+
+
+
+}
+
+.index h1 {
+    background: linear-gradient(to bottom, #4a0a0a, #fd1717);
+    margin-top: 0;
+    height: 10vh;
+    padding: 20px 0;
+    padding-bottom: 0;
+}
+
+.index .h1-Minsc {
+    font-size: 3em;
+}
+
+
+
+
+
+.podzagolovok {
+    color: #9c9d9b;
+    font-size: 28px;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    margin-bottom: 35px;
+
+
+}
+
+
+
+.otstup {
+    padding-bottom: 50px;
+    font-size: 35px;
+    text-align: center;
+    color: honeydew;
+    text-shadow: 2px 2px 4px black;
+
+    width: 90vw;
+    margin: 0 auto;
+
+}
+
+
+.imges {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    margin: 0 auto;
+
+
+}
+
+
+.pict-index {
+    width: 20vw;
+    height: 200px;
+    transition: transform 0.8s ease;
+    display: block;
+    /* только увеличение */
+}
+
+.pict-index:hover {
+    transform: scale(1.3);
+}
+
+.card {
+    overflow: hidden;
+    width: 20vw;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 1px black;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* поворот и тень */
+    transition-delay: 0s;
+    /* задержка по умолчанию */
+}
+
+.card:hover {
+    transform: perspective(800px) rotateY(-20deg);
+    box-shadow: 0 0 15px 1px rgb(247, 244, 244);
+    transition-delay: 0.3s;
+    /* ЗАДЕРЖКА ТОЛЬКО ДЛЯ ПОВОРОТА */
+}
+
+
+.back {
+    background: rgb(100, 201, 184);
+    font-size: 30px;
+
+    text-align: center;
+    width: 200px;
+    height: 70px;
+    margin-top: 80px;
+    border-radius: 10px;
+
+}
+
+
+
+
+
+
+.standart_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 40vh;
+
+}
+
+
+
+.h3-index {
+
+    font-size: 1.2em;
+    text-align: center;
+    color: honeydew;
+    text-shadow: 2px 2px 4px black;
+    padding-top: 10px;
+
+
+}
+
+/* ===== ФУТЕР для индекса===== */
+
+.footer {
+    width: 100%;
+    margin-top: auto;
+    /* ← прижимает футер к низу */
+
+    padding-bottom: 10px;
+    background: linear-gradient(to bottom, rgba(42, 192, 22, 0.034) 20%, #015f10);
+
+    text-align: center;
+    color: #5d2626;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    flex-shrink: 0;
+    /* ← чтобы футер не сжимался */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.footer-content p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.footer .author-name {
+    /* font-weight: bold; */
+    color: #211c08;
+}
+
+.footer a {
+    color: #221e0d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+
+
+/*стили для mir.html*/
+
+.block-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 85vw;
+    margin: 30px auto;
+    height: 400px;
+}
+
+.wrap_mir h1 {
+    padding: 0;
+    margin: 0;
+    padding-top: 30px;
+    background: linear-gradient(to bottom, #4a0a0a, #fd1717);
+
+}
+
+.interactive {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+
+    width: 25vw;
+    height: 50vh;
+}
+
+.a-interactiv {
+    text-decoration: none;
+    color: rgb(3, 0, 0);
+    font-size: 30px;
+    padding: 35px 90px;
+
+
+}
+
+.knopki {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(247, 245, 245);
+
+    width: 27vw;
+    height: 120px;
+    border-radius: 4px;
+    box-shadow: 0 0 15px 1px rgb(63, 62, 62);
+    /* opacity: 0.9; */
+    transition: all 0.5s ease;
+
+}
+
+.interactive .knopki {
+    opacity: 0.8;
+    height: 10vh;
+}
+
+
+
+.knopki:hover {
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+}
+
+
+.mir2 {
+
+    width: 55vw;
+    height: 55vh;
+
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px 1px rgb(63, 62, 62);
+    object-fit: cover;
+    /* ← Обрежь лишнее без искажений */
+    display: block;
+
+}
+
+.wrap_mir {
+    height: 100%;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #fd1717 16%, #2ac016 100%);
+    padding-bottom: 50px;
+
+}
+
+.mirinfo {
+    background-color: #c4bbbb;
+    width: 90vw;
+    /* border: 2px solid red; */
+    margin: 0 auto;
+    border-radius: 15px;
+    font-size: 23px;
+    padding: 35px;
+    text-align: justify;
+    box-shadow: 0 0 10px 1px black;
+    opacity: 0.8;
+}
+
+.mirinfo p {
+    padding-bottom: 15px;
+}
+
+
+
+
+
+
+/* тестовая страница mir*/
+
+
+.wrap-mir_test {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* ← центрируем всё по горизонтали */
+    background: url(../img/fotoMir.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* фон не двигается при скролле */
+}
+
+.h1_test {
+    /* margin: 30px auto 20px auto;
+    padding: 15px 30px;
+    width: 70%;
+    max-width: 800px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(8, 72, 165, 0.5));
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border-bottom: 1px solid white; */
+
+
+
+    background: linear-gradient(to right, rgba(175, 47, 47, 0.7) 45%, rgb(201, 240, 6, 0.7));
+    border: initial;
+    font-size: 45px;
+
+
+    width: 100vw;
+    max-width: none;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 35px 30px;
+}
+
+.test_top_container {
+    display: flex;
+    justify-content: center;
+    /* ← центрируем кнопки */
+    gap: 40px;
+    /* ← расстояние между кнопками */
+    width: 100%;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.test_top_container .knopki {
+    height: 80px;
+    width: 20vw;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.test_top_container .knopki a {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.test_top_container .knopki:hover {
+    transform: scale(1.05);
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.test_top_container .knopki a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+
+}
+
+.test_top_container .knopki a:hover {
+    color: red;
+}
+
+/* ===== ВИКТОРИНА mir===== */
+
+.quiz-container {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 40px 50px;
+    border-radius: 15px;
+    width: 75%;
+    max-width: 80vw;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.quiz-container h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #1a1a2e;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #e94560;
+    letter-spacing: 1px;
+}
+
+.quiz-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* отступы между вопросами */
+}
+
+.quiz-container p {
+    font-weight: 700;
+    font-size: 18px;
+    color: #16213e;
+    margin: 20px 0 10px 0;
+    padding-left: 10px;
+    border-left: 4px solid #e94560;
+    text-align: left;
+    /* сам вопрос слева, как в тестах */
+}
+
+.quiz-container label {
+    display: block;
+    padding: 8px 15px;
+    margin: 2px 0;
+    font-size: 17px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    text-align: left;
+    /* варианты ответов слева */
+}
+
+.quiz-container label:hover {
+    background: rgba(233, 69, 96, 0.1);
+}
+
+.quiz-container input[type="radio"],
+.quiz-container input[type="checkbox"] {
+    margin-right: 12px;
+    transform: scale(1.2);
+    accent-color: #e94560;
+    /* цвет для галочек и кружков */
+}
+
+/* Кнопка "Узнать результат" */
+.quiz-container button {
+    display: block;
+    margin: 30px auto 10px auto;
+    padding: 14px 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to right, #e94560, #c23152);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+}
+
+.quiz-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(233, 69, 96, 0.6);
+    background: linear-gradient(to right, #c23152, #a02843);
+}
+
+/* ===== РЕЗУЛЬТАТ ===== */
+
+#result {
+    margin: 0 auto 40px auto;
+    padding: 20px 40px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    width: fit-content;
+    min-width: 300px;
+}
+
+
+#result {
+    margin: 20px auto;
+    padding: 20px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    max-width: 600px;
+    display: none;
+    /* скрыт по умолчанию */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+#result small {
+    font-weight: normal;
+    opacity: 0.8;
+    display: block;
+    margin-top: 8px;
+}
+
+.wrap-nesvig_test {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* ← центрируем всё по горизонтали */
+    background: url(../img/nesvig_test1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* фон не двигается при скролле */
+}
+
+.wrap-lida_test {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* ← центрируем всё по горизонтали */
+    background: url(../img/lida\ vic.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* фон не двигается при скролле */
+}
+
+.wrap-ruga_test {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../img/ruga\ fon.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+/* стили кнопкам на страницах с тестами*/
+#test_kn_nesv {
+
+
+    border: 0.1px solid rgb(113, 49, 49);
+
+    /* background: linear-gradient(to right, rgba(175, 47, 47, 0.7) 45%, rgba(125, 149, 5, 0.7)); */
+    background: rgba(165, 42, 42, 0.85);
+    opacity: 1;
+}
+
+#test_kn_nesv:hover {
+    border: 1px solid white;
+}
+
+#test_kn_nesv a {
+
+    text-shadow: 0.5px 0.5px 0.5px black;
+
+    font-size: 25px;
+    color: rgb(247, 248, 245);
+}
+
+#test_kn_nesv a:hover {
+    color: rgb(251, 250, 250);
+    /* text-shadow: 0.5px 0.5px 0.5px black; */
+}
+
+
+
+
+
+#test_kn_nesv1 {
+
+
+    border: 0.1px solid rgb(113, 49, 49);
+
+    /* background: linear-gradient(to right, rgba(175, 47, 47, 0.7) 45%, rgba(125, 149, 5, 0.7)); */
+    background: rgba(165, 42, 42, 0.85);
+}
+
+#test_kn_nesv1:hover {
+    border: 1px solid white;
+}
+
+#test_kn_nesv1 a {
+
+    text-shadow: 0.5px 0.5px 0.5px black;
+
+    font-size: 25px;
+    color: rgb(247, 248, 245);
+}
+
+#test_kn_nesv1 a:hover {
+    color: rgb(251, 250, 250);
+    /* text-shadow: 0.5px 0.5px 0.5px black; */
+}
+
+
+.h1_test_nesv {
+
+    background: linear-gradient(to right, rgba(175, 47, 47, 0.7) 45%, rgb(201, 240, 6, 0.7));
+    border: initial;
+    font-size: 45px;
+    color: rgb(1, 41, 3);
+    text-shadow: 1px 1px 0.2px rgb(228, 216, 127);
+    width: 100vw;
+    max-width: none;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 35px 35px;
+
+}
+
+#nesv-h1 {
+    width: 100%;
+}
+
+/* МИНСКАЯ ОбЛ */
+
+.minsk-pict {
+    object-fit: cover;
+    object-position: center;
+}
+
+.h3-index {
+    height: 7vh;
+}
+
+/* кнопка назад на главную для всех областей */
+#nazad {
+
+    /* height: 7vh; */
+    width: 10em;
+    /* background-color: rgba(15, 15, 15, 0.15); */
+
+    color: #000;
+    font-size: 1.5em;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 3vh auto;
+    /* border-bottom: 2px solid black; */
+    border-bottom: 2px solid rgb(79, 17, 17);
+
+    text-decoration: none;
+
+}
+
+/* оптимизация под  устройства с меньшей диагональю экрана*/
+
+@media (max-width: 1200px) {
+    .imges {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrap-index {
+        gap: 25px;
+    }
+
+    .index h1 {
+        padding-top: 20px;
+        margin-top: 0;
+        /* height: 20vh; */
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom, #4a0a0a, #fd1717);
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .podzagolovok {
+        font-size: 25px;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .otstup {
+        font-size: 25px;
+        padding-bottom: 0;
+        margin: 0 auto;
+        padding-top: 0;
+    }
+
+    .h3-index {
+        margin-bottom: 28px;
+        margin-top: 15px;
+        padding-top: 0;
+        font-size: 1.7em;
+    }
+
+    .card {
+        width: 50vw;
+        height: auto;
+    }
+
+    .pict-index {
+        width: 100%;
+
+    }
+
+
+    /* #img_zamok {
+        object-fit: contain;
+        object-position: center;
+        border: 2px solid red;
+    } */
+
+    .wrap_mir {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* ← уменьшил общий gap */
+    }
+
+    .block-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 90vw;
+        margin: 0 auto;
+        gap: 20px;
+        /* ← расстояние между картинкой и кнопками */
+    }
+
+    .mir2 {
+        width: 90vw;
+        height: auto;
+    }
+
+    .interactive {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        width: 20vw;
+        gap: 20px;
+        /* ← расстояние между кнопками */
+        justify-content: center;
+    }
+
+    /* ===== КНОПКИ ===== */
+    .knopki {
+        height: 70px;
+        /* ← было 60px, стало 70px */
+        width: 60vw;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+        border-radius: 12px;
+        /* ← было 4px, стало 12px */
+    }
+
+    .knopki a {
+        font-size: 22px;
+        padding: 0 20px;
+    }
+
+    .interactive .knopki {
+        opacity: 0.8;
+    }
+
+    /* ===== БЛОК С ИНФОРМАЦИЕЙ ===== */
+    .mirinfo {
+        margin-top: 20px;
+        /* ← расстояние между кнопкой и текстом */
+        width: 90vw;
+        padding: 25px;
+        font-size: 20px;
+    }
+
+    #test_kn_nesv,
+    #test_kn_nesv1 {
+        width: 40vw;
+    }
+
+    #test_kn_nesv a,
+    #test_kn_nesv1 a {
+        font-size: 22px;
+    }
+
+
+
+}
+
+@media (max-width: 450px) {
+    .wrap-index h1 {
+        padding-top: 20px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .index .podzagolovok,
+    .index .otstup {
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .podzagolovok {
+        margin-top: 0;
+    }
+
+    .index h1 {
+        height: 70px;
+    }
+
+    /*  КНОПКИ для экранов телефонов  */
+    .knopki {
+        height: 60px;
+        /* ← было 50px, стало 60px */
+        width: 70vw;
+        border-radius: 15px;
+        /* ← было 4px, стало 15px */
+    }
+
+    .knopki a {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .interactive {
+        width: 90vw;
+        gap: 15px;
+        /* ← расстояние между кнопками на телефонах */
+    }
+
+    .block-top {
+        gap: 15px;
+        /* ← между картинкой и кнопками */
+    }
+
+    .mirinfo {
+        margin-top: 15px;
+        /* ← между кнопкой и текстом */
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .mirinfo p {
+        padding-bottom: 10px;
+    }
+
+    /* 
+    .h1_test {
+        font-size: 22px;
+        padding: 15px 20px;
+    } */
+
+
+    #test_kn_nesv,
+    #test_kn_nesv1 {
+        width: 60vw;
+        height: 55px;
+        border-radius: 12px;
+    }
+
+    #test_kn_nesv a,
+    #test_kn_nesv1 a {
+        font-size: 16px;
+    }
+
+
+}
