@@ -1,0 +1,333 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: clamp(12px, 1.2vw, 25px);
+    /* задаю плавающий размер шрифта: самый маленький 12px, самый стандартный для всего 1.2vw, и не больше 25px */
+}
+
+
+.wrap2 {
+    height: 100vh;
+
+    background: url(../img_city/city1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.doroga1 {
+
+    height: 60vh;
+    width: 90vw;
+    border: 7vh solid rgb(53, 51, 51);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 10px rgb(53, 51, 51);
+    position: relative;
+    box-shadow: 0px 0px 15px 5px rgb(17, 18, 17);
+
+}
+
+.doroga2 {
+    position: relative;
+    height: 46vh;
+    width: calc(90vw - 14vh);
+    border: 7vh solid rgb(53, 51, 51);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0px 0px 15px 5px rgb(17, 18, 17);
+
+}
+
+.doroga2::before {
+    content: '';
+    position: absolute;
+
+    /* Выносим на внешний край бордера (толщина 7vh) */
+    inset: -7vh;
+
+    /* Прерывистая белая линия */
+    border: 4px dashed white;
+
+    /* Радиус = радиус блока (20px) + толщина бордера (7vh) */
+    border-radius: 30px;
+
+    /* Чтобы разметка не мешала кликам */
+    pointer-events: none;
+}
+
+.doroga2_skruglenie {
+    height: 32vh;
+    width: calc(90vw - 14vh - 14vh);
+    border: 1px solid rgb(53, 51, 51);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 15px rgb(53, 51, 51);
+}
+
+
+
+
+
+.wrap2 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+
+
+
+
+
+}
+
+h1.centerText {
+    height: 25vh;
+
+    align-items: center;
+    color: red;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(10, 9, 9);
+
+
+
+    padding: 0;
+
+    margin: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(53, 51, 51, 0.282), rgba(255, 255, 255, 0.989), rgba(53, 51, 51, 0.271));
+
+
+
+
+}
+
+
+.doroga1_1 {
+
+    height: 60vh;
+    width: 90vw;
+
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+}
+
+
+.roditel_obl1 {
+
+    height: 50%;
+    width: 90vw;
+    position: absolute;
+
+    top: -7vh;
+    z-index: 999;
+    display: flex;
+    align-content: start;
+    justify-content: space-between;
+}
+
+
+.roditel_obl2 {
+
+    height: 50%;
+    width: 90vw;
+    position: absolute;
+
+
+    bottom: -7vh;
+
+    z-index: 999;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.obl {
+
+    background: url(../img/flag.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 15vh;
+    width: 14vw;
+    min-width: 100px;
+
+
+    text-align: right;
+    cursor: pointer;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vh;
+    transition: all 1s;
+    box-shadow: 0 0 5px 1px white;
+
+
+
+
+}
+
+
+.obl:hover,
+.obl.car-touch {
+    transform: scale(1.05);
+    transition: all 1s;
+    box-shadow: 0 0 25px 3px #fff;
+
+
+}
+
+
+
+
+
+
+
+
+.ex {
+    height: 15vh;
+
+
+
+}
+
+
+
+.ex2 {
+    height: 15vh;
+
+
+}
+
+
+.obl:hover p,
+.obl.car-touch p {
+    color: white;
+    font-size: 1.4em;
+    transition: all 1s;
+}
+
+.obl p {
+
+    color: rgba(245, 247, 249, 0.735);
+    font-size: 1.3em;
+    text-shadow: 1px 1px 1px #090a0a;
+
+    transition: all 1s;
+    text-align: center;
+
+
+
+}
+
+.roditel_obl1>a,
+.obl_wr>a {
+    text-decoration: none;
+}
+
+
+
+.car {
+    position: absolute;
+    top: -8vh;
+    left: -3vh;
+
+    height: 17vh;
+    width: 9vh;
+    background: url(../img/auto5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+    transform: rotate(90deg);
+    animation: car 15s linear infinite;
+    transform-origin: center center;
+
+
+}
+
+
+
+
+
+@keyframes car {
+    0% {
+        top: -9vh;
+        left: -5vh;
+        transform: rotate(0deg);
+    }
+
+    3% {
+        top: -9vh;
+        left: -5vh;
+        transform: rotate(90deg);
+    }
+
+    24% {
+        top: -9vh;
+        left: calc(90vw - 19vh);
+        transform: rotate(90deg);
+    }
+
+    26% {
+        top: -9vh;
+        left: calc(90vw - 19vh);
+        transform: rotate(180deg);
+    }
+
+    46% {
+        top: 38vh;
+        left: calc(90vw - 19vh);
+        transform: rotate(180deg);
+    }
+
+    50% {
+        top: 38vh;
+        left: calc(90vw - 19vh);
+        transform: rotate(270deg);
+    }
+
+    72% {
+        top: 38vh;
+        left: -5vh;
+        transform: rotate(270deg);
+    }
+
+    75% {
+        top: 38vh;
+        left: -5vh;
+        transform: rotate(360deg);
+    }
+
+
+    100% {
+        top: -9vh;
+        left: -5vh;
+        transform: rotate(360deg);
+    }
+
+
+}
