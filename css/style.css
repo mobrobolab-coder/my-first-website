@@ -929,3 +929,17 @@ h1 {
 
 
 }
+
+
+@media (min-width: 450px) and (max-width: 1200px) and (orientation: landscape) {
+    .standart_block{
+        height: 100vh;
+    }
+}
+
+/* Можно комбинировать три и более условий */
+@media (min-width: 450px) and (max-width: 1200px) and (orientation: portrait) {
+    .standart_block{
+        height: 40vh;
+    }
+}
