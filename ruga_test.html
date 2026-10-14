@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина по Ружанскому дворцу</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
+</head>
+
+<body>
+
+   <div class="wrap-ruga_test">
+
+
+
+        <h1 class="h1_test h1_test_nesv wow animate__fadeInDown" data-wow-delay=0.05s id="nesv-h1"> Проверь себя, что ты <br> запомнил</h1>
+
+
+
+
+
+        <div class="test_top_container">
+
+            <div class="na_mir knopki mir-test-button wow animate__fadeInLeft" data-wow-delay=0.5s  id="test_kn_nesv">
+                <a href="./ruga.html" class="a-interactiv">Почитать статью</a>
+            </div>
+
+
+
+            <div class="na_index knopki mir-test-button wow animate__fadeInRight" data-wow-delay=0.7s  id="test_kn_nesv1">
+                <a href="./index.html" class="a-interactiv">На главную</a>
+            </div>
+
+
+        </div>
+
+
+        <div div class="quiz-container">
+            <h2>Викторина</h2>
+            <form id="quizForm">
+                <p>1. В какие годы был построен Ружанский дворец?</p>
+                <label><input type="radio" name="q1" value="wrong"> в 1770-1774</label><br>
+                <label><input type="radio" name="q1" value="wrong"> в 1780-1784</label><br>
+                <label><input type="radio" name="q1" value="right"> в 1784—1786 </label><br>
+
+                <p>2. Кто архитектор дворца?</p>
+                <label><input type="radio" name="q2" value="wrong"> Джузеппе Сакко</label><br>
+                <label><input type="radio" name="q2" value="right"> Я.С. Беккер</label><br>
+                <label><input type="radio" name="q2" value="wrong"> Карл Спампани</label><br>
+
+                <p>3. Что было построено до дворца?</p>
+                <label><input type="radio" name="q3" value="right"> замок</label><br>
+                <label><input type="radio" name="q3" value="wrong"> усадьба</label><br>
+                <label><input type="radio" name="q3" value="wrong"> особняк</label><br>
+               
+
+                <p>4. Сколько золотых монет составляла пенсия архитектора Ружанского дворца?</p>
+                <label><input type="radio" name="q4" value="right"> 2150</label><br>
+                <label><input type="radio" name="q4" value="wrong"> 2250</label><br>
+                <label><input type="radio" name="q4" value="wrong"> 2350</label><br>
+                
+
+                <p>5. В каком году дворец приспособили под фабрику?</p>
+                <label><input type="radio" name="q5" value="wrong"> в 1817</label><br>
+                <label><input type="radio" name="q5" value="wrong"> в 1821</label><br>
+                <label><input type="radio" name="q5" value="right"> в 1834</label><br>
+
+                <p>6. Какого князя ВКЛ принимали во дворце?</p>
+                <label><input type="radio" name="q6" value="wrong"> Гедимина</label><br>
+                <label><input type="radio" name="q6" value="right"> Станислава Августа Понятовского</label><br>
+                <label><input type="radio" name="q6" value="wrong"> Кейстута</label><br>
+
+                <p>7. В каком году сгорел дворец?</p>
+                <label><input type="radio" name="q7" value="wrong"> в 1912</label><br>
+                <label><input type="radio" name="q7" value="wrong"> в 1913</label><br>
+                <label><input type="radio" name="q7" value="right"> в 1914</label><br>
+
+                <p>8. В каком году Лев Сапега выкупил Ружаны?</p>
+                <label><input type="radio" name="q8" value="wrong"> в 1599</label><br>
+                <label><input type="radio" name="q8" value="right"> в 1598</label><br>
+                <label><input type="radio" name="q8" value="wrong"> в 1600</label><br>
+
+                <p>9. Сколько ежегодно выделяется на восстановление дворца? </p>
+                <label><input type="radio" name="q9" value="wrong"> 10 млн BYN</label><br>
+                <label><input type="radio" name="q9" value="wrong"> 100 млн BYN</label><br>
+                <label><input type="radio" name="q9" value="right"> 1 млрд BYN</label><br>
+
+                <p>10. В каком году открылся музей?</p>
+                <label><input type="radio" name="q10" value="wrong"> в 2012</label><br>
+                <label><input type="radio" name="q10" value="right"> в 2011</label><br>
+                <label><input type="radio" name="q10" value="wrong"> в 2010</label><br>
+                <br>
+                <button type="button" onclick="checkQuiz()">Узнать результат</button>
+            </form>
+        </div>
+        <div id="result"></div>
+
+
+    </div>
+    <script>
+    function checkQuiz() {
+        // ===== ВОПРОСЫ С RADIO (один ответ) =====
+        const q1 = document.querySelector('input[name="q1"]:checked');
+        const q2 = document.querySelector('input[name="q2"]:checked');
+        const q3 = document.querySelector('input[name="q3"]:checked');
+        const q4 = document.querySelector('input[name="q4"]:checked');
+        const q5 = document.querySelector('input[name="q5"]:checked');
+        const q6 = document.querySelector('input[name="q6"]:checked');
+        const q7 = document.querySelector('input[name="q7"]:checked');
+        const q8 = document.querySelector('input[name="q8"]:checked');
+        const q9 = document.querySelector('input[name="q9"]:checked');
+        const q10 = document.querySelector('input[name="q10"]:checked');
+
+        // ===== ВОПРОС С CHECKBOX (несколько ответов) =====
+        const q3Checked = document.querySelectorAll('input[name="q3"]:checked');
+        
+        let score = 0;
+        let totalQuestions = 10;
+        let correctAnswers = [];
+
+        // ---- Проверка вопроса 1 ----
+        if (q1 && q1.value === 'right') {
+            score++;
+            correctAnswers.push(1);
+        }
+
+        // ---- Проверка вопроса 2 ----
+        if (q3 && q3.value === 'right') {
+            score++;
+            correctAnswers.push(3);
+        }
+
+        
+
+        if (q2 && q2.value === 'right') {
+            score++;
+            correctAnswers.push(2);
+        }
+
+        // ---- Проверка вопроса 4 ----
+        if (q4 && q4.value === 'right') {
+            score++;
+            correctAnswers.push(4);
+        }
+
+        // ---- Проверка вопроса 5 ----
+        if (q5 && q5.value === 'right') {
+            score++;
+            correctAnswers.push(5);
+        }
+
+        // ---- Проверка вопроса 6 ----
+        if (q6 && q6.value === 'right') {
+            score++;
+            correctAnswers.push(6);
+        }
+
+        // ---- Проверка вопроса 7 ----
+        if (q7 && q7.value === 'right') {
+            score++;
+            correctAnswers.push(7);
+        }
+
+        // ---- Проверка вопроса 8 ----
+        if (q8 && q8.value === 'right') {
+            score++;
+            correctAnswers.push(8);
+        }
+
+        // ---- Проверка вопроса 9 ----
+        if (q9 && q9.value === 'right') {
+            score++;
+            correctAnswers.push(9);
+        }
+
+        // ---- Проверка вопроса 10 ----
+        if (q10 && q10.value === 'right') {
+            score++;
+            correctAnswers.push(10);
+        }
+
+        // ===== ВЫВОД РЕЗУЛЬТАТА =====
+        const resultDiv = document.getElementById('result');
+        
+        // Оценка в процентах
+        const percentage = Math.round((score / totalQuestions) * 100);
+        
+        // Текст результата
+        let message = `✅ Правильных ответов: ${score} из ${totalQuestions} (${percentage}%)`;
+        
+        // Дополнительные комментарии в зависимости от результата
+        if (percentage === 100) {
+            message += '  Отлично! Ты знаешь всё о Ружанском дворце!';
+        } else if (percentage >= 80) {
+            message += '  Хороший результат! Ты много запомнил!';
+        } else if (percentage >= 60) {
+            message += '  Неплохо, но стоит перечитать статью ещё раз.';
+        } else if (percentage >= 40) {
+            message += '  Попробуй ещё раз, внимательнее читай статью.';
+        } else {
+            message += '  Рекомендуем перечитать статью и пройти тест заново.';
+        }
+
+        // Показываем номера правильных вопросов
+        if (correctAnswers.length > 0) {
+            message += `<br><small>✅ Правильные вопросы: ${correctAnswers.join(', ')}</small>`;
+        }
+
+        resultDiv.innerHTML = message;
+        resultDiv.style.display = 'block';
+        
+        // Плавная прокрутка к результату
+        resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+</script>
+
+    
+        <script src="js/wow.min.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+
+    <script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animate__animated',  // 👈 вместо 'animated'
+        offset: 0,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+    </script>
+    
+</body>
+
+</html>

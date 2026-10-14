@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина по Мирскому замку</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
+</head>
+
+<body>
+
+    <div class="wrap-mir_test">
+
+
+
+        <h1 class="h1_test h1_test_nesv wow animate__fadeInDown" data-wow-delay=0.05s > Проверь себя, что ты <br> запомнил</h1>
+
+
+
+
+
+        <div class="test_top_container">
+
+            <div class="na_mir knopki mir-test-button wow animate__fadeInLeft" data-wow-delay=0.5s id="test_kn_nesv">
+                <a href="./mir.html" class="a-interactiv">Почитать статью</a>
+            </div>
+
+
+
+            <div class="na_index knopki mir-test-button wow animate__fadeInRight" data-wow-delay=0.7s id="test_kn_nesv1">
+                <a href="./index.html" class="a-interactiv">На главную</a>
+            </div>
+
+
+        </div>
+
+
+        <div div class="quiz-container">
+            <h2>Викторина</h2>
+            <form id="quizForm">
+                <p>1. В какие годы приблизительно был построен Мирский Замок?</p>
+                <label><input type="radio" name="q1" value="wrong"> в 1430-ых</label><br>
+                <label><input type="radio" name="q1" value="right"> в 1530-ых</label><br>
+                <label><input type="radio" name="q1" value="wrong"> в 1510-ых</label><br>
+
+                <p>2. Первый владелец замка?</p>
+                <label><input type="radio" name="q2" value="wrong"> Юрий Лугвеньевич</label><br>
+                <label><input type="radio" name="q2" value="wrong"> Юрий Радзивилл</label><br>
+                <label><input type="radio" name="q2" value="right"> Юрий Ильинич</label><br>
+
+                <p>3. Перечислите династии, в чьей собственности находился Мирский замок за всю его историю?</p>
+                <label><input type="checkbox" name="q3" value="right"> Ильиничи</label><br>
+                <label><input type="checkbox" name="q3" value="right"> Радзивиллы</label><br>
+                <label><input type="checkbox" name="q3" value="right"> Витгенштейны</label><br>
+                <label><input type="checkbox" name="q3" value="right"> Святополк-Мирские</label><br>
+
+                <p>4. Сколько этажей имеет пятая башня?</p>
+                <label><input type="radio" name="q4" value="right"> 6</label><br>
+                <label><input type="radio" name="q4" value="wrong"> 5</label><br>
+                <label><input type="radio" name="q4" value="wrong"> 4</label><br>
+
+                <p>5. В каком стиле изначально был построен Мирский замок?</p>
+                <label><input type="radio" name="q5" value="wrong"> классицизм</label><br>
+                <label><input type="radio" name="q5" value="wrong"> барокко</label><br>
+                <label><input type="radio" name="q5" value="right"> готика</label><br>
+
+                <p>6. Какую форму имеет замок?</p>
+                <label><input type="radio" name="q6" value="right"> квадрат</label><br>
+                <label><input type="radio" name="q6" value="wrong"> прямоугольник</label><br>
+                <label><input type="radio" name="q6" value="wrong"> ромб</label><br>
+
+                <p>7. Какая приблизительная длина стен и высота башен Мирского замка?</p>
+                <label><input type="radio" name="q7" value="wrong"> 65 м, 23-24 м.</label><br>
+                <label><input type="radio" name="q7" value="right"> 75 м, 25-27 м.</label><br>
+                <label><input type="radio" name="q7" value="wrong"> 70 м, 20-25 м.</label><br>
+
+                <p>8. На берегу какой реки находится замок?</p>
+                <label><input type="radio" name="q8" value="wrong"> Днепр</label><br>
+                <label><input type="radio" name="q8" value="right"> Миранка</label><br>
+                <label><input type="radio" name="q8" value="wrong"> Нёман</label><br>
+
+                <p>9. На какой купюре изображен Мирский замок?</p>
+                <label><input type="radio" name="q9" value="wrong"> 100 BYN</label><br>
+                <label><input type="radio" name="q9" value="right"> 50 BYN</label><br>
+                <label><input type="radio" name="q9" value="wrong"> 20 BYN</label><br>
+
+                <p>10. В каком году замок стал самостоятельным музеем?</p>
+                <label><input type="radio" name="q10" value="wrong"> В 2010</label><br>
+                <label><input type="radio" name="q10" value="right"> В 2011</label><br>
+                <label><input type="radio" name="q10" value="wrong"> В 2012</label><br>
+                <br>
+                <button type="button" onclick="checkQuiz()">Узнать результат</button>
+            </form>
+        </div>
+        <div id="result"></div>
+
+
+    </div>
+
+
+
+<!-- 
+
+    <script>
+        function checkQuiz() {
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+            const q3 = document.querySelector('input[name="q3"]:checked');
+            const q4 = document.querySelector('input[name="q4"]:checked');
+            const q5 = document.querySelector('input[name="q5"]:checked');
+            const q6 = document.querySelector('input[name="q6"]:checked');
+            const q7 = document.querySelector('input[name="q7"]:checked');
+            const q8 = document.querySelector('input[name="q8"]:checked');
+            const q9 = document.querySelector('input[name="q9"]:checked');
+            const q10 = document.querySelector('input[name="q10"]:checked');
+            let score = 0;
+
+            if (q1 && q1.value === 'right') score++;
+            if (q2 && q2.value === 'right') score++;
+
+            if (q3 && q3.value === 'right') score++;
+            if (q4 && q4.value === 'right') score++;
+
+            if (q5 && q5.value === 'right') score++;
+            if (q6 && q6.value === 'right') score++;
+
+            if (q7 && q7.value === 'right') score++;
+            if (q8 && q8.value === 'right') score++;
+
+            if (q9 && q9.value === 'right') score++;
+            if (q10 && q10.value === 'right') score++;
+
+
+            document.getElementById('result').innerText = `Правильных ответов: ${score} из 10`;
+        }
+    </script> -->
+
+
+    <script>
+    function checkQuiz() {
+        // ===== ВОПРОСЫ С RADIO (один ответ) =====
+        const q1 = document.querySelector('input[name="q1"]:checked');
+        const q2 = document.querySelector('input[name="q2"]:checked');
+        const q4 = document.querySelector('input[name="q4"]:checked');
+        const q5 = document.querySelector('input[name="q5"]:checked');
+        const q6 = document.querySelector('input[name="q6"]:checked');
+        const q7 = document.querySelector('input[name="q7"]:checked');
+        const q8 = document.querySelector('input[name="q8"]:checked');
+        const q9 = document.querySelector('input[name="q9"]:checked');
+        const q10 = document.querySelector('input[name="q10"]:checked');
+
+        // ===== ВОПРОС С CHECKBOX (несколько ответов) =====
+        const q3Checked = document.querySelectorAll('input[name="q3"]:checked');
+        
+        let score = 0;
+        let totalQuestions = 10;
+        let correctAnswers = [];
+
+        // ---- Проверка вопроса 1 ----
+        if (q1 && q1.value === 'right') {
+            score++;
+            correctAnswers.push(1);
+        }
+
+        // ---- Проверка вопроса 2 ----
+        if (q2 && q2.value === 'right') {
+            score++;
+            correctAnswers.push(2);
+        }
+
+        // ---- Проверка вопроса 3 (checkbox) ----
+        // Правильные ответы: все 4 варианта должны быть отмечены
+        const correctValues = ['right', 'right', 'right', 'right'];
+        let allChecked = true;
+        
+        if (q3Checked.length === 4) {
+            q3Checked.forEach((el, index) => {
+                if (el.value !== correctValues[index]) {
+                    allChecked = false;
+                }
+            });
+        } else {
+            allChecked = false;
+        }
+
+        if (allChecked) {
+            score++;
+            correctAnswers.push(3);
+        }
+
+        // ---- Проверка вопроса 4 ----
+        if (q4 && q4.value === 'right') {
+            score++;
+            correctAnswers.push(4);
+        }
+
+        // ---- Проверка вопроса 5 ----
+        if (q5 && q5.value === 'right') {
+            score++;
+            correctAnswers.push(5);
+        }
+
+        // ---- Проверка вопроса 6 ----
+        if (q6 && q6.value === 'right') {
+            score++;
+            correctAnswers.push(6);
+        }
+
+        // ---- Проверка вопроса 7 ----
+        if (q7 && q7.value === 'right') {
+            score++;
+            correctAnswers.push(7);
+        }
+
+        // ---- Проверка вопроса 8 ----
+        if (q8 && q8.value === 'right') {
+            score++;
+            correctAnswers.push(8);
+        }
+
+        // ---- Проверка вопроса 9 ----
+        if (q9 && q9.value === 'right') {
+            score++;
+            correctAnswers.push(9);
+        }
+
+        // ---- Проверка вопроса 10 ----
+        if (q10 && q10.value === 'right') {
+            score++;
+            correctAnswers.push(10);
+        }
+
+        // ===== ВЫВОД РЕЗУЛЬТАТА =====
+        const resultDiv = document.getElementById('result');
+        
+        // Оценка в процентах
+        const percentage = Math.round((score / totalQuestions) * 100);
+        
+        // Текст результата
+        let message = `✅ Правильных ответов: ${score} из ${totalQuestions} (${percentage}%)`;
+        
+        // Дополнительные комментарии в зависимости от результата
+        if (percentage === 100) {
+            message += '  Отлично! Ты знаешь всё о Мирском замке!';
+        } else if (percentage >= 80) {
+            message += '  Хороший результат! Ты много запомнил!';
+        } else if (percentage >= 60) {
+            message += '  Неплохо, но стоит перечитать статью ещё раз.';
+        } else if (percentage >= 40) {
+            message += '  Попробуй ещё раз, внимательнее читай статью.';
+        } else {
+            message += '  Рекомендуем перечитать статью и пройти тест заново.';
+        }
+
+        // Показываем номера правильных вопросов
+        if (correctAnswers.length > 0) {
+            message += `<br><small>✅ Правильные вопросы: ${correctAnswers.join(', ')}</small>`;
+        }
+
+        resultDiv.innerHTML = message;
+        resultDiv.style.display = 'block';
+        
+        // Плавная прокрутка к результату
+        resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+</script>
+
+    
+        <script src="js/wow.min.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+
+    <script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animate__animated',  // 👈 вместо 'animated'
+        offset: 0,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+    </script>
+</body>
+
+</html>

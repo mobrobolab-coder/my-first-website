@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style_index.css">
+</head>
+
+<body>
+
+    <div class="wrap2">
+        <h1 class="centerText">Интеллектуальный вояж <!--по историческим местам Беларуси--></h1>
+
+        <div class="doroga1">
+
+            <div class="car"></div>
+            <!-- <div class="doroga1_1"> -->
+
+                <div class="roditel_obl1">
+
+
+
+                  <a href="./minsk.html"><div class="ex obl "><div class="p_wrap"><p>Минская </p><p>область</p></div></div></a>
+                  <a href="./gomel.html"><div class="ex obl "><div class="p_wrap"><p>Гомельская </p><p>область</p></div></div></a>
+                  <a href="./grodno.html"><div class="ex obl "><div class="p_wrap"><p>Гродненская </p><p>область</p></div></div></a>
+
+                    
+
+                </div>
+                <!-- /.roditel_obl1 -->
+
+                <div class="roditel_obl2">
+
+                    <div  class="obl_wr"><a href="./vitebsk.html"><div class="ex2 obl "><div class="p_wrap"><p>Витебская </p><p>область</p></div></div></a></div>
+                    <div  class="obl_wr"><a href="./mogilev.html"><div class="ex2 obl "><div class="p_wrap"><p>Могилёвская </p><p>область</p></div></div></a></div>
+                    <div  class="obl_wr"><a href="./brest.html"><div class="ex2 obl "><div class="p_wrap"><p>Брестская </p><p>область</p></div></div></a></div>
+
+
+                </div>
+                <!-- /.roditel_obl2 -->
+
+
+            <!-- </div> -->
+            <!-- /.doroga1_1 -->
+
+
+
+            <div class="doroga2">
+
+
+                <div class="doroga2_skruglenie">
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+    const car = document.querySelector('.car');
+    const oblasts = document.querySelectorAll('.obl');
+
+    function checkCollision() {
+        const carRect = car.getBoundingClientRect();
+
+        oblasts.forEach(obl => {
+            const oblRect = obl.getBoundingClientRect();
+
+            const hit = !(
+                carRect.right  < oblRect.left  ||
+                carRect.left   > oblRect.right ||
+                carRect.bottom < oblRect.top   ||
+                carRect.top    > oblRect.bottom
+            );
+
+            obl.classList.toggle('car-touch', hit);
+        });
+
+        requestAnimationFrame(checkCollision);
+    }
+
+    requestAnimationFrame(checkCollision);
+</script>
+
+</body>
+
+</html>
